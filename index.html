@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The High Throne</title>
+    <meta name="description" content="A narrative strategy game by PergamenaLabs. Coming soon.">
+    <meta name="robots" content="index, follow">
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark-bg: #0a0a0a;
+            --parchment: #d4c5a3;
+        }
+        body {
+            background-color: var(--dark-bg);
+            /* Hafif bir doku hissi veren radyal geçiş */
+            background-image: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+            color: var(--parchment);
+            font-family: 'Georgia', 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            user-select: none;
+        }
+
+        .container {
+            padding: 50px 30px;
+            /* Çift çerçeve efekti: Dışta koyu, içte altın */
+            border: 1px solid #333;
+            outline: 2px solid var(--gold);
+            outline-offset: -10px; /* Altın çerçeveyi içeri çeker */
+            
+            background: linear-gradient(145deg, #141414, #0d0d0d);
+            /* Daha derin, mistik bir gölge */
+            box-shadow: 0 20px 60px rgba(0,0,0,0.9), inset 0 0 30px rgba(0,0,0,0.8);
+            max-width: 500px;
+            position: relative;
+        }
+
+        /* Kraliyet Tacı İkonu */
+        .royal-seal {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            /* İkonun hafifçe parlaması */
+            text-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 15px;
+            margin-top: 0;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: normal;
+            /* Altın metalik yazı efekti */
+            background: linear-gradient(to bottom, #e6c88d, #c5a059, #8c703a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 0.9rem;
+            font-weight: lighter;
+            letter-spacing: 0.15em;
+            opacity: 0.7;
+            margin-top: 0;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #333;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        p.status {
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        /* Tacın yavaşça havada süzülme animasyonu */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; letter-spacing: 0.1em; }
+            .royal-seal { font-size: 3rem; }
+            .container { width: 80%; outline-offset: -8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="royal-seal">👑</div>
+        
+        <h1>THE HIGH THRONE</h1>
+        <h2>PergamenaLabs</h2>
+        
+        <p class="status">"Yakında..."</p>
+    </div>
+
+</body>
+</html>
